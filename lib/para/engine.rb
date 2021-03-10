@@ -75,7 +75,9 @@ module Para
     end
 
     initializer 'Check for extensions installation' do
-      Para::PostgresExtensionsChecker.check_all
+      unless defined?(::Rake::SprocketsTask)
+        Para::PostgresExtensionsChecker.check_all
+      end
     end
 
     initializer 'Initialize simple form wrappers' do
