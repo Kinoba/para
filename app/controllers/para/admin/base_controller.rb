@@ -11,8 +11,10 @@ module Para
 
       layout 'para/admin'
 
-      helper_method :current_admin
-      helper_method :admin_body_class
+      if respond_to?(:helper_method)
+        helper_method :current_admin
+        helper_method :admin_body_class
+      end
 
       def current_admin
         @current_admin ||= if Para.config.current_admin_method

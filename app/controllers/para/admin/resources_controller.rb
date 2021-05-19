@@ -8,7 +8,9 @@ module Para
 
       class_attribute :resource_name, :resource_class
       load_and_authorize_component
-      helper_method :resource
+      if respond_to?(:helper_method)
+        helper_method :resource
+      end
 
       def new
         render 'para/admin/resources/new'

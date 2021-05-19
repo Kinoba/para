@@ -8,7 +8,9 @@ module Para
 
         before_action :build_breadcrumbs_manager
 
-        helper_method :add_breadcrumb, :breadcrumbs
+        if respond_to?(:helper_method)
+          helper_method :add_breadcrumb, :breadcrumbs
+        end
         helper ViewHelper
       end
 
