@@ -92,7 +92,7 @@ en:
       empty: "The list is empty"
 
     export:
-      name: "Export %{name}"
+      name: "Export"
       as: "Exporting (.%{extension})"
 
     import:
