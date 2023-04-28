@@ -90,7 +90,7 @@ module Para
       end
 
       tables_exist
-    rescue ActiveRecord::NoDatabaseError
+    rescue ActiveRecord::NoDatabaseError, PG::ConnectionBad
       false # Do not load components when the database is not installed
     end
 
