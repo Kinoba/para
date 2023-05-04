@@ -1,5 +1,5 @@
 # This migration comes from para_engine (originally 20140911112150)
-class AddSlugToParaComponents < ActiveRecord::Migration
+class AddSlugToParaComponents < ActiveRecord::Migration[5.0]
   def change
     add_column :para_components, :slug, :string
     add_index :para_components, :slug

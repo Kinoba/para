@@ -18,7 +18,6 @@ require 'ransack'
 require 'friendly_id'
 require 'deep_cloneable'
 require 'closure_tree'
-require 'friendly_id'
 
 require 'jquery-rails'
 require 'turbolinks'

@@ -1,5 +1,5 @@
 # This migration comes from para_engine (originally 20140911091225)
-class CreateParaComponents < ActiveRecord::Migration
+class CreateParaComponents < ActiveRecord::Migration[5.0]
   def up
     execute 'CREATE EXTENSION IF NOT EXISTS hstore'
 

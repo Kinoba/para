@@ -1,5 +1,5 @@
 # This migration comes from para_engine (originally 20140929125733)
-class CreateParaComponentSections < ActiveRecord::Migration
+class CreateParaComponentSections < ActiveRecord::Migration[5.0]
   def change
     create_table :para_component_sections do |t|
       t.string :name
