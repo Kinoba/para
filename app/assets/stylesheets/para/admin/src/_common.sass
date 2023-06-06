@@ -24,7 +24,7 @@
 
 [class*="hint--"]:after
   text-transform: lowercase
-  +text-shadow(none)
+  text-shadow: none
 
 //** icons
 .icon-rounded
@@ -35,7 +35,7 @@
   line-height: 32px
   font-weight: 700
   font-style: normal
-  +border-radius(100%)
+  border-radius: 100%
 
 //** Thumbtack in statcard
 .thumbtack-link
@@ -47,13 +47,13 @@
   &.active
     .fa-thumb-tack
       color: $purple
-      +text-shadow(none)
+      text-shadow: none
 
 .fa-thumb-tack
-  +rotate(-45deg)
+  transform: rotate(-45deg)
   font-size: 25px
   color: #fff
-  +text-shadow()
+  text-shadow: none
   +default-transition
 
 //== Positioning

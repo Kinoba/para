@@ -7,18 +7,18 @@
 //##
 
 .pagination
-  +border-radius(0)
+  border-radius: 0
   +clearfix
   display: block
   margin-bottom: 0
   text-align: center
   > li
-    +inline-block
+    display: inline-block
     > a,
     > span
-      +border-radius($border-radius-small)
-      +inline-block
-      +material-box-shadow-soft(1)
+      border-radius: $border-radius-small
+      display: inline-block
+      box-shadow: $soft-shadow(1)
       background-color: $gray-lighter
       border: none
       float: none
@@ -31,4 +31,4 @@
   > li:first-child
     > a,
     > span
-      +border-radius($border-radius-small)
+      border-radius: $border-radius-small

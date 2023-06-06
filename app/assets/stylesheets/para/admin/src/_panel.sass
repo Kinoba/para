@@ -8,12 +8,12 @@
 
 .panel
   border: none
-  +material-box-shadow-soft(2)
+  box-shadow: $soft-shadow-2
 
   //** Panel with collapse element
   .collapsed
     .fa-angle-up
-      +rotate(180deg)
+      transform: rotate(180deg)
 
   //** Panel is orderable
   .order-anchor
@@ -25,7 +25,7 @@
 .panel-heading
   padding: 10px 25px
   border: none
-  +border-radius(2px)
+  border-radius: 2px
   +clearfix
   //** Do not destroy panel heading if image is inside
   img

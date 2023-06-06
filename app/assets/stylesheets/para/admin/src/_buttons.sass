@@ -61,7 +61,7 @@
 //** Override boostrap active btns if here is in dropdown
 .btn-group.open .dropdown-toggle,
 .dropdown.open .dropdown-toggle
-  +material-box-shadow-soft(2)
+  box-shadow: $soft-shadow-2
 
 
 //** Override the default btn of bootstrap
@@ -72,11 +72,11 @@
 
 //** Override default comportement of bootstrap with btn shadow
 .btn-shadow
-  +material-box-shadow-soft(1)
+  box-shadow: $soft-shadow(1)
   +default-transition
   &:active,
   &.active
-    +material-box-shadow-soft(2)
+    box-shadow: $soft-shadow-2
 
 //** Btn outline
 .btn-default-outline

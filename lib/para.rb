@@ -24,7 +24,6 @@ require 'turbolinks'
 require 'sass-rails'
 require 'selectize-rails'
 require 'bootstrap-sass'
-require 'compass-rails'
 require 'font-awesome-rails'
 
 require 'vertebra'

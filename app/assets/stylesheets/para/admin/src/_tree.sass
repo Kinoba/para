@@ -25,7 +25,7 @@
   padding-bottom: 5px
   margin-top: 15px
   .node-row
-    +default-transition
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1)
     border-bottom: 1px dashed $gray-light
     padding: 5px
     &:first-child
@@ -41,7 +41,7 @@
 
   .node-name
     margin-top: 4px
-    +inline-block
+    display: inline-block
 
   .placeholder
     border: dashed 1px $gray
