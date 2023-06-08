@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'kaminari'
   s.add_dependency 'paperclip', '~> 6.0'
   s.add_dependency 'pg'
-  s.add_dependency 'rails', '>= 4.0', '<= 6.1'
+  s.add_dependency 'rails', '>= 4.0', '<= 6.0.6.1'
   s.add_dependency 'rails-i18n'
   s.add_dependency 'ransack'
   s.add_dependency 'request_store'
@@ -44,7 +44,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'simple_form', '~> 5.0'
   s.add_dependency 'simple_form_extension', '>= 1.4.5'
   s.add_dependency 'spreadsheet'
-  s.add_dependency 'truncate_html'
   s.add_dependency 'turbolinks'
   s.add_dependency 'vertebra'
 end

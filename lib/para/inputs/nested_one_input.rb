@@ -9,14 +9,16 @@ module Para
         relation = parent_model.reflect_on_association(attribute_name)
         model = relation.klass
 
-        unless (resource = object.send(:"#{ attribute_name }"))
+        unless (resource = object.send(:"#{attribute_name}"))
           # Build association without trying to save the new record
           resource = case association
-          when ActiveRecord::Associations::HasOneAssociation
-            association.replace(model.new, false)
-          else
-            association.replace(model.new)
-          end
+                     when ActiveRecord::Associations::HasOneAssociation
+                       new_resource = model.new
+                       association.writer(new_resource)
+                       new_resource
+                     else
+                       association.build
+                     end
         end
 
         template.render(
