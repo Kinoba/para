@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    para (1.1.0)
+    para (1.1.1)
       active_decorator (~> 0.9)
       activejob-status
       bootstrap-sass (~> 3.3.0)

@@ -102,7 +102,7 @@ module Para
     #
     def eager_load_components!
       $LOAD_PATH.each do |path|
-        next unless path.match(/\/components$/)
+        next unless path.to_s.match(%r{/components})
 
         glob = File.join(path, '**', '*_component.rb')
 
