@@ -1,6 +1,6 @@
 module Para
   class ExporterGenerator < Rails::Generators::NamedBase
-    source_root File.expand_path('../templates', __FILE__)
+    source_root File.expand_path('templates', __dir__)
 
     argument :formats, type: :array
 
@@ -13,8 +13,8 @@ module Para
         @format = format
 
         template(
-          "#{ base_exporter_template_name_for(format) }_exporter.rb",
-          "app/exporters/#{ exporter_name }.rb"
+          "#{base_exporter_template_name_for(format)}_exporter.rb",
+          "app/exporters/#{exporter_name}.rb"
         )
       end
     end
@@ -30,9 +30,9 @@ module Para
     end
 
     def base_exporter_template_name_for(format)
-      format_specific_template = "../templates/#{ format }_exporter.rb"
+      format_specific_template = "../templates/#{format}_exporter.rb"
 
-      if File.exists?(File.expand_path(format_specific_template, __FILE__))
+      if File.exist?(File.expand_path(format_specific_template, __FILE__))
         format
       else
         'base'

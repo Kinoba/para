@@ -24,7 +24,7 @@ module Para
       end
 
       def find_relation_name_for(relation, partial, options = {})
-        return relation if partial_exists?(relation, partial, options)
+        return relation if partial_exists?(relation: relation, partial: partial, **options)
         return nil unless options[:relation_class]
 
         relation = options[:relation_class].ancestors.find do |ancestor|
@@ -32,7 +32,7 @@ module Para
           break if ancestor == ActiveRecord::Base
 
           ancestor_name = plural_file_path_for(ancestor.name)
-          partial_exists?(ancestor_name, partial, options)
+          partial_exists?(relation: ancestor_name, partial: partial, **options)
         end
 
         plural_file_path_for(relation) if relation
@@ -88,7 +88,7 @@ module Para
         object.respond_to?(:model_name)
       end
 
-      def partial_exists?(relation, partial, overrides_root: 'admin', **options)
+      def partial_exists?(relation:, partial:, overrides_root: 'admin', **options)
         partial_path = partial.to_s.split('/')
         partial_path[-1] = "_#{ partial_path.last }"
         lookup_context.find_all("#{ overrides_root }/#{relation}/#{ partial_path.join('/') }").any?

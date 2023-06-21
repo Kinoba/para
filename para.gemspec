@@ -1,4 +1,4 @@
-$:.push File.expand_path('../lib', __FILE__)
+$:.push File.expand_path('lib', __dir__)
 
 # Maintain your gem's version:
 require 'para/version'
@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'activejob-status'
   s.add_dependency 'bootstrap-sass', '~> 3.3.0'
   s.add_dependency 'cancancan'
-  s.add_dependency 'closure_tree', '~> 6.2'
+  s.add_dependency 'closure_tree'
   s.add_dependency 'cocoon'
   s.add_dependency 'coffee-rails'
   s.add_dependency 'deep_cloneable', '~> 3.2.0'
@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'kaminari'
   s.add_dependency 'paperclip', '~> 6.0'
   s.add_dependency 'pg'
-  s.add_dependency 'rails', '>= 4.0', '<= 6.0.6.1'
+  s.add_dependency 'rails', '>= 4.0', '< 7.1'
   s.add_dependency 'rails-i18n'
   s.add_dependency 'ransack'
   s.add_dependency 'request_store'

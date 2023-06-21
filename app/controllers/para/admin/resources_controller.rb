@@ -39,7 +39,7 @@ module Para
       end
 
       def update
-        if resource.update_attributes(resource_params)
+        if resource.update(resource_params)
           flash_message(:success, resource)
           redirect_to after_form_submit_path
         else
